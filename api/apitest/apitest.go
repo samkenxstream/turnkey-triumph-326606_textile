@@ -179,6 +179,12 @@ func Signin(t *testing.T, client *client.Client, conf core.Config, usernameOrEma
 func ConfirmEmail(t util.TestingTWithCleanup, gurl string, secret string) {
 	time.Sleep(time.Second)
 	url := fmt.Sprintf("%s/confirm/%s", gurl, secret)
+
+	fmt.Println(url)
+	fmt.Println(url)
+	fmt.Println(url)
+	fmt.Println(url)
+
 	_, err := http.Get(url)
 	require.NoError(t, err)
 	time.Sleep(time.Second)

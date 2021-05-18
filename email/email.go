@@ -61,6 +61,14 @@ func (c *Client) ConfirmAddress(ctx context.Context, id, username, email, url, s
 			"username": username,
 		},
 	}
+
+	link := fmt.Sprintf("%s/confirm/%s", url, secret);
+	
+	fmt.Println(link)
+	fmt.Println(link)
+	fmt.Println(link)
+	fmt.Println(link)
+
 	if _, err := c.client.SendEmail(ctx, &request); err != nil {
 		return err
 	}
